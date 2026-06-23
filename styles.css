@@ -75,20 +75,16 @@ body {
 }
 
 /* Hero Section */
-.hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 2rem;
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #F5F5F5 0%, var(--light-gray) 100%);
-}
-
 .hero .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
+    padding: 4rem 0;
+}
+
+.hero {
+    background: linear-gradient(135deg, #F5F5F5 0%, var(--light-gray) 100%);
 }
 
 .hero-content h1 {
@@ -146,17 +142,17 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
 .service-card {
     background: var(--light-gray);
-    padding: 2rem;
     border-radius: 10px;
-    text-align: center;
+    overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
     border-left: 4px solid var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .service-card:hover {
@@ -164,19 +160,29 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
 .service-icon {
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+    padding-top: 1.5rem;
+    padding-left: 2rem;
 }
 
 .service-card h3 {
     color: var(--secondary-color);
     margin-bottom: 1rem;
+    padding: 0 2rem;
 }
 
 .service-card p {
     color: #666;
+    padding: 0 2rem 2rem;
 }
 
 /* About Section */
@@ -297,6 +303,7 @@ body {
 .info-item a {
     color: var(--primary-color);
     text-decoration: none;
+    font-weight: bold;
 }
 
 .contact-form {
